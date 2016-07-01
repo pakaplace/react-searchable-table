@@ -33,7 +33,7 @@ npm start
 
 ### Sample output
 
-Sample CSV file:
+#### CSV data
 
 ```csv
 First name,Last name,Phone,Address
@@ -44,11 +44,11 @@ Abhi,Ramesh,910,Philly
 Lane,Rettig,333,NYC
 ```
 
-Sample page layout:
+#### Page layout
 
 ![](img/layout.png)
 
-Sample page sorted layout:
+#### Page layout (sorted)
 
 ![](img/layout-sort.png)
 
