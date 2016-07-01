@@ -14,6 +14,10 @@ into components that talk to each other. We don't need that today.
 
 TODO
 
+```
+npm start
+```
+
 ### Flow
 
 1. User clicks the file picker and chooses a CSV file
@@ -22,18 +26,14 @@ TODO
    `csv-parse` npm package
 1. Page displays and HTML table representing the contents of the CSV file.
    Use the first line of the file as column headings
-   ![](img/layout.png)
 1. User clicks column heading to sort table by contents of that column
-   ![](img/layout-sort.png)
 1. User clicks the column heading again to reverse the direction of the
    sort
 1. User clicks "Clear Sort" button to revert the data to it's original format
 
-### The view
+### Sample output
 
-There should be a single file picker on the page.
-
-Sample CSV file
+Sample CSV file:
 
 ```csv
 First name,Last name,Phone,Address
@@ -43,6 +43,14 @@ Darwish,Gani,678,Philly
 Abhi,Ramesh,910,Philly
 Lane,Rettig,333,NYC
 ```
+
+Sample page layout:
+
+![](img/layout.png)
+
+Sample page sorted layout:
+
+![](img/layout-sort.png)
 
 ### Credits
 
