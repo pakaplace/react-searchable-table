@@ -18,7 +18,7 @@ TODO
 npm start
 ```
 
-### Flow
+### User interaction flow
 
 1. User clicks the file picker and chooses a CSV file
 1. (Optional) If the provided file is not a CSV file, page displays error.
@@ -51,6 +51,44 @@ Lane,Rettig,333,NYC
 #### Page layout (sorted)
 
 ![](img/layout-sort.png)
+
+### Step 1: Read file data in JavaScript
+
+Add a file picker to the page and `console.log()`  contents of any file
+that the user selects.
+
+Use the provided `FileInput` component to display a file picker on the page.
+This component has an `onChange` event handler that is called with the contents
+of the file after it has been read.
+
+```jsx
+function log(data) {
+  console.log(data);
+}
+
+... Stuff left out here ...
+
+<FileInput className="form-control" onChange={log} />
+```
+
+### Step 2: Parse CSV file data
+
+1. Use the `csv-parse` library to parse the data from the user specified file
+   into JavaScript arrays.
+
+  ```javascript
+  var parse = require('csv-parse');
+  parse(data, {}, function(err, data) {
+    if (err) {
+      console.log('error parsing', err);
+    } else {
+      // data is an array of arrays
+      console.log('data', data);
+    }
+  });
+  ```
+
+1.
 
 ### Credits
 
