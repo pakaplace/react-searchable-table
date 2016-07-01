@@ -4,26 +4,6 @@
 
 The goal of this exercise is to display tabular data interactively using React.
 
-## Instructions
-
-For this exercise you will have a single React component that renders the
-whole page. Tomorrow we're going to learn how to split React applications
-into components that talk to each other. We don't need that today.
-
-### Running your app
-
-Start your app with `npm start` and visit
-[localhost:3000](http://localhost:3000/) to view it.
-
-Your app comes preconfigured `webpack` hot module reloader so you don't
-have to use nodemon to restart after making changes.
-
-Your React code goes in `reactive-table/client/index.js` and your
-HTML code goes in `index.html`.
-
-Bootstrap has been included for you. You can add more CSS files in
-`reactive-table/css`.
-
 ### User interaction flow
 
 1. User clicks the file picker and chooses a CSV file
@@ -57,6 +37,26 @@ Lane,Rettig,333,NYC
 #### Page layout (sorted)
 
 ![](img/layout-sort.png)
+
+## Instructions
+
+For this exercise you will have a single React component that renders the
+whole page. Tomorrow we're going to learn how to split React applications
+into components that talk to each other. We don't need that today.
+
+### Step 0: Running your app
+
+Start your app with `npm start` and visit
+[localhost:3000](http://localhost:3000/) to view it.
+
+Your app comes preconfigured `webpack` hot module reloader so you don't
+have to use nodemon to restart after making changes.
+
+Your React code goes in `reactive-table/client/index.js` and your
+HTML code goes in `index.html`.
+
+Bootstrap has been included for you. You can add more CSS files in
+`reactive-table/css`.
 
 ### Step 1: Read file data in JavaScript
 
