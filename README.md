@@ -4,19 +4,6 @@
 
 The goal of this exercise is to display tabular data interactively using React.
 
-### User interaction flow
-
-1. User clicks the file picker and chooses a CSV file
-1. (Optional) If the provided file is not a CSV file, page displays error.
-1. Page reads the contents of the file via JavaScript and parses it using the
-   `csv-parse` npm package
-1. Page displays and HTML table representing the contents of the CSV file.
-   Use the first line of the file as column headings
-1. User clicks column heading to sort table by contents of that column
-1. User clicks the column heading again to reverse the direction of the
-   sort
-1. User clicks "Clear Sort" button to revert the data to it's original format
-
 ### Sample output
 
 #### CSV data
@@ -37,6 +24,31 @@ Lane,Rettig,333,NYC
 #### Page layout (sorted)
 
 ![](img/layout-sort.png)
+
+#### Page layout (Search)
+
+With no query:
+
+![](img/layout-search.png)
+
+With query:
+
+![](img/layout-search2.png)
+
+### User interaction flow
+
+1. User clicks the file picker and chooses a CSV file
+1. (Optional) If the provided file is not a CSV file, page displays error.
+1. Page reads the contents of the file via JavaScript and parses it using the
+   `csv-parse` npm package
+1. Page displays and HTML table representing the contents of the CSV file.
+   Use the first line of the file as column headings
+1. User clicks column heading to sort table by contents of that column
+1. User clicks the column heading again to reverse the direction of the
+   sort
+1. User clicks "Clear Sort" button to revert the data to it's original format
+1. User types in the "Search" box, which filters down table contents
+   using simple string matching with `string.indexOf(query) > -1`
 
 ## Instructions
 
