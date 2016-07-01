@@ -14,6 +14,19 @@ into components that talk to each other. We don't need that today.
 
 There should be a single file picker on the page.
 
+Sample CSV file
+
+```csv
+First name,Last name,Phone,Address
+Moose,Paksoy,123,SF
+Edward,Lando,345,NYC
+Darwish,Gani,678,Philly
+Abhi,Ramesh,910,Philly
+Lane,Rettig,333,NYC
+```
+
+![](img/layout.png)
+
 ### Credits
 
 Boilerplate code courtesy of
