@@ -49,6 +49,7 @@ With query:
 1. User clicks "Clear Sort" button to revert the data to it's original format
 1. User types in the "Search" box, which filters down table contents
    using simple string matching with `string.indexOf(query) > -1`
+1.
 
 ## Instructions
 
@@ -106,7 +107,19 @@ function log(data) {
   });
   ```
 
-1.
+1. TODO
+
+### Step 3: Sort by column
+
+TODO
+
+### Step 4: Search
+
+TODO
+
+### Bonus step: Search by column
+
+TODO
 
 ### Credits
 
