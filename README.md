@@ -12,11 +12,17 @@ into components that talk to each other. We don't need that today.
 
 ### Running your app
 
-TODO
+Start your app with `npm start` and visit
+[localhost:3000](http://localhost:3000/) to view it.
 
-```
-npm start
-```
+Your app comes preconfigured `webpack` hot module reloader so you don't
+have to use nodemon to restart after making changes.
+
+Your React code goes in `reactive-table/client/index.js` and your
+HTML code goes in `index.html`.
+
+Bootstrap has been included for you. You can add more CSS files in
+`reactive-table/css`.
 
 ### User interaction flow
 
