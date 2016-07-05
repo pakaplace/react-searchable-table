@@ -106,20 +106,63 @@ function log(data) {
     }
   });
   ```
+### Step 4: Display data in a table.
 
-1. TODO
+1. Create a react component using React.createClass({}) that displays a table with all the elements in the array.
+  To do this, use the render(<table> // YOUR CODE HERE </table>) method to build your table out of the data.
+1. Use getInitialState to initialize the table data arrays and parse the data from CSV.
+1. Create headers for each row, using the first line of the CSV file as headers.
+1. Display the rest of the data in the table body. One way to do this is to map the columns array into an array that contains
+all the react elements that will be displayed
+```
+return columns.map(function(c, i) {
+  return <td key={i}>{item[c]}</td>;
+})
+```
+1. Remember that a table is an array of arrays. You have to map once for rows -> `<tr>` and once again on each row for cells `<td>`
 
-### Step 3: Sort by column
 
-TODO
+### Step 5: Sort by column
 
-### Step 4: Search
+We are going to build a simplified version of sorting.
+1. Create a onClick event listener on the table headers.
+1. This should call a function on the component that sorts information according to a specific column.
+1. Clicking the column once should sort in ascending order. Clicking the column header again should toggle between 'asc' and 'dsc' order
+1. Add a '▲' or '▼' character depending on how it is sorted.
+1. Sort the data array according to the user's new preferences.
 
-TODO
+Note: Keep a copy of the data array somewhere else to restore when doing "Clean Sort"
+1. Add a button that restores the initial order.
+1. A copy of the original data would be a good way to do this, instead of reading and parsing the CSV again.
+1. Clear all the filters if you have any.
+
+BONUS: Instead of only having one column sorted at a time, create an object `sortDir` that
+contains both the sorted column name and their directions so you can sort using more than one column at a time. For example:
+```
+sortDir: {FirstName: 'asc', LastName: 'dsc'}
+```
+
+### Step 6: Search
+
+1. Create an object, string or array that holds your search queries in your component's state.
+1. Create a form with a text input that receives the search query.
+1. Add an onChange listener to the form that detects, stores and saves the query string to your component's state using `setState()`
+1. Filter the elements that are displayed using indexOf() to check if the element contains the queried value.
+HINT: Don't modify the data array, just filter the ones you display on render.
 
 ### Bonus step: Search by column
 
-TODO
+1. Using the same procedure as above, add an input on the headers of each column, below the title.
+1. Use a filters array to store the values for each column and their queries.
+1. Filter the elements being displayed.
+
+Your filters array could look like this:
+contains both the sorted column name and their directions so you can sort using more than one column at a time. For example:
+```
+filters: {FirstName: 'Moose', Number: '1'}
+```
+A good idea would be to use the same filters array for the column data as for step 6.
+You can use the name "Global" for the main search bar
 
 ### Credits
 
